@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { JobsDetailComponent } from './jobs-detail.component';
 
-describe('JobsDetailComponent', () => {
+xdescribe('JobsDetailComponent', () => {
   let component: JobsDetailComponent;
   let fixture: ComponentFixture<JobsDetailComponent>;
 

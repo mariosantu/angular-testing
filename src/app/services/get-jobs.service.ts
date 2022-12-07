@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-
 import { HttpClient } from '@angular/common/http';
 
 
@@ -13,6 +12,7 @@ export class GetJobsService {
   level:string = '';
 
 
+  // constructor(private _httpclient: HttpClient) { }
   constructor(private _httpclient: HttpClient) { }
 
   // con questa funzione controllo e costruisco l'url

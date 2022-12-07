@@ -15,7 +15,6 @@ export class DashboardComponent implements OnInit {
   defaultCategory:string = 'Software Engineering'; // categoria di default selezionata ad avvio applicazione
   userCategoryChoice:string = this.defaultCategory; // eventuale scelta di categoria da parte dell'utente (se categoryList è > 1)
 
-
   // nel caso si volesse alimentare la lista delle categorie
   // decommentare il seguente categoryList e commentare quello
   // impostato di default.
@@ -79,14 +78,24 @@ export class DashboardComponent implements OnInit {
   // onChangeLevel ha lo scopo di controllare eventuali scelte 
   // effettuate dall'utente sui livelli (Entry Level,Mid Level...).
   // input: string 
-  // output: boolean
+  // output: [object]
   onChangeLevel($event:any) {
 
     const selectedLevel = $event.target.value;
+    // let selectedLevel = '';
+
+    // if($event.target.value != undefined) {
+    //    selectedLevel = $event.target.value;
+    // } else {
+    //    selectedLevel = 'Senior Level';
+    // }
+    
+    console.log(selectedLevel + 'valore di selected level');
     this.levelsList = this.levelsList.map((lvl) => {
       if(lvl.name == selectedLevel) {
         lvl.selected = !lvl.selected;
       }
+      console.log('lvl ' + lvl);
       return lvl;
     });
 

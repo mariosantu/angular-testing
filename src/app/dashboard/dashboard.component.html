@@ -21,12 +21,12 @@
   <!-- checkbox -->
   <div class="level-container" *ngFor="let level of levelsList">
 
-      <input type="checkbox" [value]="level.name"
+      <input class="inputCheck" type="checkbox" [value]="level.name"
       [checked]="level.selected"
       (change)="onChangeLevel($event)"
       />
 
-      <label for="level">{{level.name}}</label>
+      <label class="test" name="level.name" for="level">{{level.name}}</label>
   </div>
   <!-- checkbox end-->
 
